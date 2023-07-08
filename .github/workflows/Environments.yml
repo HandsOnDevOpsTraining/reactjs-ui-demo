@@ -29,7 +29,7 @@ jobs:
         SECRET: ${{ secrets.Greeting }}
       run: |
         echo "Job 1 running on Test"
-        if [ $SECRET = "TestTestTest" ]; then echo "Test"; fi
+        if [ $SECRET = "TestTestTest" ]; then echo "This is printing because I have used secret"; fi
       
   job2:
     runs-on: ubuntu-latest
