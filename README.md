@@ -7,6 +7,20 @@
 <img width="1732" alt="image" src="https://github.com/user-attachments/assets/91e8debd-267d-4043-942e-c0cb63d8725e">
 
 
+steps:
+- task: Docker@0
+  displayName: 'Build an image'
+  inputs:
+    containerregistrytype: 'Container Registry'
+    dockerRegistryConnection: DockerHubFeb2025Batch
+    imageName: 'handsondevops/feb2025image:$(Build.BuildId)'
+- task: Docker@0
+  displayName: 'Push an image'
+  inputs:
+    containerregistrytype: 'Container Registry'
+    dockerRegistryConnection: DockerHubFeb2025Batch
+    action: 'Push an image'
+    imageName: 'handsondevops/feb2025image:$(Build.BuildId)'
 
 
 [https://uidesigndaily.com/](https://uidesigndaily.com/posts/sketch-birthdays-list-card-widget-day-1042)
